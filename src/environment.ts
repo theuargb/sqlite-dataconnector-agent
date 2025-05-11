@@ -39,6 +39,7 @@ export const DEBUGGING_TAGS = envToBool('DEBUGGING_TAGS');
 export const QUERY_LENGTH_LIMIT = envToNum('QUERY_LENGTH_LIMIT', Infinity);
 
 export const MUTATIONS = envToBool('MUTATIONS');
+console.log(MUTATIONS);
 
 export const DATASETS = envToBool('DATASETS');
 export const DATASET_DELETE = envToBool('DATASET_DELETE');
