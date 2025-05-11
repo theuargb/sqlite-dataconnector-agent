@@ -27,6 +27,7 @@ function determineScalarType(datatype: Datatype): ScalarTypeKey {
     case "bool": return "bool";
     case "boolean": return "bool";
     case "datetime": return "DateTime";
+    case "json": return "string";
   }
   switch (datatype.affinity) {
     case "integer": return "number";
