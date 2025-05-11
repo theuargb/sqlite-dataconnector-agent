@@ -43,7 +43,7 @@ function getColumns(ast: any[]) : ColumnInfo[] {
   return ast.map(column => {
     const isAutoIncrement = column.definition.some((def: any) => def.type === "constraint" && def.autoIncrement === true);
     const type = determineScalarType(column.datatype);
-    console.log(`${column.name} -> ${type}`);
+    console.log(`${column.name} ${column.datatype.variant} (${column.datatype.affinity}) -> ${type}`);
     return {
       name: column.name,
       type: determineScalarType(column.datatype),
